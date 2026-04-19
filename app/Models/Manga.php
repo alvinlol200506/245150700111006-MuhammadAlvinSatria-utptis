@@ -6,17 +6,13 @@ use Illuminate\Support\Facades\File;
 
 class Manga
 {
-    /**
-     * Path ke file JSON sebagai mock database.
-     */
+    // Path ke file JSON sebagai mock database
     protected static function path(): string
     {
         return database_path('data/manga.json');
     }
 
-    /**
-     * Ambil semua manga dari file JSON.
-     */
+    // Ambil semua manga dari file JSON
     public static function all(): array
     {
         $path = self::path();
@@ -31,9 +27,7 @@ class Manga
         return is_array($data) ? $data : [];
     }
 
-    /**
-     * Cari manga berdasarkan id. Return null jika tidak ditemukan.
-     */
+    // Cari manga berdasarkan id. Return null jika tidak ditemukan
     public static function find(int $id): ?array
     {
         foreach (self::all() as $item) {
@@ -45,18 +39,14 @@ class Manga
         return null;
     }
 
-    /**
-     * Simpan kembali array manga ke file JSON.
-     */
+    // Simpan kembali array manga ke file JSON
     public static function save(array $items): bool
     {
         $json = json_encode($items, JSON_PRETTY_PRINT | JSON_UNESCAPED_UNICODE);
         return File::put(self::path(), $json) !== false;
     }
 
-    /**
-     * Hitung id berikutnya (auto increment).
-     */
+    // Hitung id berikutnya (auto increment)
     public static function nextId(): int
     {
         $items = self::all();
@@ -69,9 +59,7 @@ class Manga
         return max($ids) + 1;
     }
 
-    /**
-     * Tambah manga baru.
-     */
+    // Tambah manga baru
     public static function create(array $data): array
     {
         $items = self::all();
@@ -87,9 +75,7 @@ class Manga
         return $newItem;
     }
 
-    /**
-     * Update manga berdasarkan id. Return data terbaru, atau null jika tidak ada.
-     */
+    // Update manga berdasarkan id. Return data terbaru, atau null jika tidak ada
     public static function update(int $id, array $data): ?array
     {
         $items = self::all();
@@ -111,9 +97,7 @@ class Manga
         return $updated;
     }
 
-    /**
-     * Hapus manga berdasarkan id. Return true jika berhasil.
-     */
+    // Hapus manga berdasarkan id. Return true jika berhasil
     public static function delete(int $id): bool
     {
         $items = self::all();
