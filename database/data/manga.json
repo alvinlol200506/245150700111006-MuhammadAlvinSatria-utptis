@@ -1,0 +1,66 @@
+[
+    {
+        "id": 1,
+        "title": "One Piece Vol. 1",
+        "author": "Eiichiro Oda",
+        "price": 35000,
+        "genre": "Shounen",
+        "stock": 15
+    },
+    {
+        "id": 2,
+        "title": "Naruto Vol. 1",
+        "author": "Masashi Kishimoto",
+        "price": 32000,
+        "genre": "Shounen",
+        "stock": 10
+    },
+    {
+        "id": 3,
+        "title": "Attack on Titan Vol. 1",
+        "author": "Hajime Isayama",
+        "price": 40000,
+        "genre": "Dark Fantasy",
+        "stock": 8
+    },
+    {
+        "id": 4,
+        "title": "Jujutsu Kaisen Vol. 1",
+        "author": "Gege Akutami",
+        "price": 42000,
+        "genre": "Shounen",
+        "stock": 20
+    },
+    {
+        "id": 5,
+        "title": "Chainsaw Man Vol. 1",
+        "author": "Tatsuki Fujimoto",
+        "price": 45000,
+        "genre": "Dark Fantasy",
+        "stock": 12
+    },
+    {
+        "id": 6,
+        "title": "Demon Slayer Vol. 1",
+        "author": "Koyoharu Gotouge",
+        "price": 38000,
+        "genre": "Shounen",
+        "stock": 18
+    },
+    {
+        "id": 7,
+        "title": "Fruits Basket Vol. 1",
+        "author": "Natsuki Takaya",
+        "price": 36000,
+        "genre": "Shoujo",
+        "stock": 7
+    },
+    {
+        "id": 8,
+        "title": "Spy x Family Vol. 1",
+        "author": "Tatsuya Endo",
+        "price": 41000,
+        "genre": "Comedy",
+        "stock": 25
+    }
+]
